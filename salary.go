@@ -7,15 +7,14 @@
 package main
 
 import (
-    "fmt"
-    "github.com/leekchan/accounting"
+	"fmt"
+	"github.com/leekchan/accounting"
 )
-
 
 // This function displays currency
 func main() {
-  // Defining variables
-  accountingFormater := accounting.Accounting{Symbol: "$", Precision: 2}
+	// Defining variables
+	accountingFormater := accounting.Accounting{Symbol: "$", Precision: 2}
 	var hours float32
 	var rate float32
 
@@ -25,14 +24,14 @@ func main() {
 	// User Input
 	fmt.Println("Number of hours worked: ")
 	fmt.Scanln(&hours)
-  fmt.Println()
+	fmt.Println()
 
 	fmt.Println("Hourly rate: $")
 	fmt.Scanln(&rate)
-  fmt.Println()
+	fmt.Println()
 
-  // Print out pay and gov take away
-  fmt.Println("Your pay will be:",accountingFormater.FormatMoney((hours*rate)*(1.00-0.18)))
-  fmt.Println("The government will take:",accountingFormater.FormatMoney((hours*rate)*0.18)) 
+	// Print out pay and gov take away
+	fmt.Println("Your pay will be:", accountingFormater.FormatMoney((hours*rate)*(1.00-0.18)))
+	fmt.Println("The government will take:", accountingFormater.FormatMoney((hours*rate)*0.18))
 
 }
