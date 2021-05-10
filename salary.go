@@ -33,5 +33,4 @@ func main() {
 	// Print out pay and gov take away
 	fmt.Println("Your pay will be:", accountingFormater.FormatMoney((hours*rate)*(1.00-0.18)))
 	fmt.Println("The government will take:", accountingFormater.FormatMoney((hours*rate)*0.18))
-
 }
